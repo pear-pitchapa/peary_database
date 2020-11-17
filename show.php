@@ -7,7 +7,19 @@
     <script>
       function dele(param) 
       {
-        alert(param);
+        <?php 
+          $sql = "DELETE FROM MyGuests WHERE id=3";
+          $sql = "DELETE FROM guestbook WHERE ID=param";
+
+          if (mysqli_query($conn, $sql)) {
+              alert("yesss")
+          } 
+          else {
+              echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+          }
+        
+        
+        ?>
       }
     </script>
   </head>
