@@ -11,9 +11,9 @@ $name=$_REQUEST['name'];
 $comment=$_REQUEST['comment'];
 $link=$_REQUEST['link'];
 echo $id;
-echo $name;
-echo $comment;
-echo $link;
+
+
+
 $conn->close();
 
 ?>
@@ -58,18 +58,18 @@ $conn->close();
         </div>
 
         <div class="container">
-            <form action = "insert.php" method = "post" id="CommentForm" >
+            <form action = "update.php" method = "post" id="CommentForm" >
                 <div class="form-group">
                   <label for="your name">Name</label>
-                  <input type="text" class="form-control" name = "name" id="idName" placeholder="Enter name" value="test">
+                  <input type="text" class="form-control" name = "name" id="idName" placeholder="Enter name" value=<?php echo $name;?>>
                 </div>
                 <div class="form-group">
                   <label for="commmant">Comment</label>
-                  <textarea class="form-control" name = "comment" id="idComment" placeholder="Enter Comment" rows="3"></textarea>
+                  <textarea class="form-control" name = "comment" id="idComment" placeholder="Enter Comment" rows="3" value=<?php echo $comment;;?>></textarea>
                 </div>
                 <div class="form-group">
                     <label for="Link">Link</label>
-                    <input type="text" class="form-control" name = "link" id="idLink" placeholder="Enter Link">
+                    <input type="text" class="form-control" name = "link" id="idLink" placeholder="Enter Link" value=<?php echo $link;;?>>
                   </div>
                 <button type="submit" class="btn btn-primary mb-2">Confirm</button>
               </form>
