@@ -1,3 +1,23 @@
+<?php
+$conn = mysqli_init();
+mysqli_real_connect($conn, 'databaselabitf.mysql.database.azure.com', 'filmzz@databaselabitf', 'film8844@', 'filmDATAB', 3306);
+if (mysqli_connect_errno($conn))
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+
+$id=$_REQUEST['id'];
+$name=$_REQUEST['name'];
+$comment=$_REQUEST['comment'];
+$link=$_REQUEST['link'];
+echo $id;
+echo $name;
+echo $comment;
+echo $link;
+$conn->close();
+
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
