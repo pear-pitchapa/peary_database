@@ -30,7 +30,6 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error deleting record: " . $conn->error;
 }
-  </div>'
 $conn->close();
 if ($done)
 {
@@ -38,5 +37,6 @@ if ($done)
     exit;
 }
 ?>
+    </div>
 </body>
 </html>
