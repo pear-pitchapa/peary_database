@@ -73,9 +73,9 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
         </form>
         <form method="POST" action="edit.php">
          <input type="hidden" name="id" value="<?php echo $Result['ID']; ?>" />
-          <input type="hidden" name="id" value="<?php echo $Result['name']; ?>" />
-          <input type="hidden" name="id" value="<?php echo $Result['comment']; ?>" />
-          <input type="hidden" name="id" value="<?php echo $Result['link']; ?>" />
+          <input type="hidden" name="name" value="<?php echo $Result['name']; ?>" />
+          <input type="hidden" name="comment" value="<?php echo $Result['comment']; ?>" />
+          <input type="hidden" name="link" value="<?php echo $Result['link']; ?>" />
         <button type="submit" class="btn btn-warning" >Edit</button>
         </form>
       </td>
