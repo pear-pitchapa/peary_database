@@ -21,6 +21,10 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 
+<div>
+<h1 class="display-1">LAB Database Bukorree  Madthing</h1>
+</div>
+  
 <div class="container">
 <table class="table table-bordered">
   <thead>
