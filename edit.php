@@ -65,7 +65,7 @@ $conn->close();
                 </div>
                 <div class="form-group">
                   <label for="commmant">Comment</label>
-                  <textarea class="form-control" name = "comment" id="idComment" placeholder="Enter Comment" rows="3" value=<?php echo $comment;?>></textarea>
+                  <textarea class="form-control" name = "comment" id="idComment" placeholder="Enter Comment" rows="3"><?php echo $comment;?></textarea>
                 </div>
                 <div class="form-group">
                     <label for="Link">Link</label>
