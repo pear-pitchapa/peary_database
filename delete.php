@@ -24,7 +24,8 @@ $id=$_REQUEST['id'];
 echo $id;
 $sql = "DELETE FROM guestbook WHERE ID=$id"; 
 if ($conn->query($sql) === TRUE) {
-  echo ('<div><h1 class="display-1">LAB Database Bukorree  Madthing</h1></div>');
+  echo ('<div class="container"><h1 class="display-1">Delete!!</h1></div>');
+  echo ('<div class="container"><h3 class="display-3"><a href="show.php">Delete!!</a></h3></div>');
 } else {
   echo "Error deleting record: " . $conn->error;
 }
