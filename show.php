@@ -7,6 +7,7 @@
     <script>
       function dele(param) 
       {
+        alert(param)
         <?php
           $conn = mysqli_init();
           mysqli_real_connect($conn, 'databaselabitf.mysql.database.azure.com', 'filmzz@databaselabitf', 'film8844@', 'filmDATAB', 3306);
@@ -16,9 +17,9 @@
           }
           $sql = "DELETE FROM guestbook WHERE ID=param";
           if ($conn->query($sql) === TRUE) {
-            echo "Record deleted successfully";
+            echo ('alert(param)');
           } else {
-            echo "Error deleting record: " . $conn->error;
+            echo ('alert("Error deleting record: " . $conn->error)');
           }
          ?>
       }
