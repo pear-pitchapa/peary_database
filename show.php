@@ -43,7 +43,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
   <br>
   <br>
 <div class="container">
-<h1 class="display-1">LAB Database Bukorree </h1>
+<h1 class="display-1">LAB Database Show</h1>
 </div>
   
 <div class="container">
