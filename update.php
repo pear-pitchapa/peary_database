@@ -28,7 +28,7 @@ $comment=$_REQUEST['comment'];
 $link=$_REQUEST['link'];
 
 
-$sql = "UPDATE guestbook SET name=$name comment=$comment link=$link WHERE id=%id";
+$sql = "UPDATE guestbook SET name='$name' comment='$comment' link='$link' WHERE id=$id";
 
 if (mysqli_query($conn, $sql)) {
     echo ('<div class="container"><h1 class="display-1">OK!!</h1></div>');
