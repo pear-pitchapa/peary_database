@@ -23,5 +23,9 @@ if (mysqli_query($conn, $sql)) {
   }
   
 mysqli_close($conn);
-header("Location: show.php"); 
+if ($done)
+{
+    header("Location: https://labitf2.azurewebsites.net/show.php");
+    exit();
+}
 ?>
