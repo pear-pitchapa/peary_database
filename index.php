@@ -51,6 +51,7 @@
                     <label for="Link">Link</label>
                     <input type="text" class="form-control" name = "link" id="idLink" placeholder="Enter Link">
                   </div>
+                <button type="submit" class="btn btn-primary mb-2">Confirm</button>
               </form>
         </div>
         
