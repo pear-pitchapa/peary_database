@@ -14,7 +14,12 @@
           {
               die('Failed to connect to MySQL: '.mysqli_connect_error());
           }
-          
+          $sql = "DELETE FROM guestbook WHERE ID=param";
+          if ($conn->query($sql) === TRUE) {
+            echo "Record deleted successfully";
+          } else {
+            echo "Error deleting record: " . $conn->error;
+          }
          ?>
       }
     </script>
