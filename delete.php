@@ -18,7 +18,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 if ($done)
 {
-    header("show.php");
-    exit;
+    header("Location: https://labitf2.azurewebsites.net/show.php");
+    exit();
 }
 ?>
