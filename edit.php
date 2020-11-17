@@ -10,7 +10,6 @@ $id=$_REQUEST['id'];
 $name=$_REQUEST['name'];
 $comment=$_REQUEST['comment'];
 $link=$_REQUEST['link'];
-echo $id;
 
 
 
@@ -59,6 +58,7 @@ $conn->close();
 
         <div class="container">
             <form action = "update.php" method = "post" id="CommentForm" >
+                <input type="hidden" name = "id" id="idName" value=<?php echo $id;?>>
                 <div class="form-group">
                   <label for="your name">Name</label>
                   <input type="text" class="form-control" name = "name" id="idName" placeholder="Enter name" value=<?php echo $name;?>>
