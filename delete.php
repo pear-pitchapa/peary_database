@@ -8,7 +8,12 @@ if (mysqli_connect_errno($conn))
 
 $id=$_REQUEST['id'];
 echo $id;
-$query = "DELETE FROM guestbook WHERE ID=$id"; 
-$result = mysqli_query($con,$query) or die ( mysqli_error());
-header("Location: show.php"); 
+$sql = "DELETE FROM guestbook WHERE ID=$id"; 
+if ($conn->query($sql) === TRUE) {
+  echo "Record deleted successfully";
+} else {
+  echo "Error deleting record: " . $conn->error;
+}
+
+$conn->close();
 ?>
