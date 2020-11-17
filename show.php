@@ -21,6 +21,7 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 
+<div class="container">
 <table class="table table-bordered">
   <thead>
     <tr class="bg-success">
@@ -44,6 +45,8 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 }
 ?>
   </tbody>
+
+</div>
 
 
 <?php
