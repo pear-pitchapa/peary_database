@@ -8,7 +8,6 @@
       function dele(param) 
       {
         <?php
-          alert(param);
           $conn = mysqli_init();
           mysqli_real_connect($conn, 'databaselabitf.mysql.database.azure.com', 'filmzz@databaselabitf', 'film8844@', 'filmDATAB', 3306);
           if (mysqli_connect_errno($conn))
