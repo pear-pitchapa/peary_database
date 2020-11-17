@@ -72,7 +72,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
       <td><?php echo $Result['name'];?></td>
       <td><?php echo $Result['comment'];?></td>
       <td><?php echo $Result['link'];?></td>
-      <td><?php echo (<button type="button" onClick="dele(' . $Result['ID'] . ')" class="btn btn-danger">Delete</button>)?><?php echo(<button type="button" class="btn btn-warning">Change</button></td>)?>
+      <td><button type="button" onClick="dele(' . $Result['ID'] . ')" class="btn btn-danger">Delete</button> <button type="button" class="btn btn-warning">Change</button></td>
     </tr>
 <?php
 }
