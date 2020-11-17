@@ -22,13 +22,13 @@ if (mysqli_connect_errno($conn))
 }
 
 
-$name = $_POST['name'];
-$comment = $_POST['comment'];
-$link = $_POST['link'];
+$id=$_REQUEST['id'];
+$name=$_REQUEST['name'];
+$comment=$_REQUEST['comment'];
+$link=$_REQUEST['link'];
 
 
-$sql = "INSERT INTO guestbook (name , comment , link) VALUES ('$name', '$comment', '$link')";
-
+$sql = "UPDATE guestbook SET name='$name' comment='$comment' link='$link' WHERE id='%id'";
 
 if (mysqli_query($conn, $sql)) {
     echo ('<div class="container"><h1 class="display-1">OK!!</h1></div>');
