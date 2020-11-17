@@ -4,26 +4,6 @@
     <title>ITF Lab</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>  
-    <script>
-      function dele(param) 
-      {
-        alert(param)
-        <?php
-          $conn = mysqli_init();
-          mysqli_real_connect($conn, 'databaselabitf.mysql.database.azure.com', 'filmzz@databaselabitf', 'film8844@', 'filmDATAB', 3306);
-          if (mysqli_connect_errno($conn))
-          {
-              die('Failed to connect to MySQL: '.mysqli_connect_error());
-          }
-          $sql = "DELETE FROM guestbook WHERE ID=param";
-          if ($conn->query($sql) === TRUE) {
-            echo ('alert(param)');
-          } else {
-            echo ('alert("Error deleting record: " . $conn->error)');
-          }
-         ?>
-      }
-    </script>
   </head>
 
 <body>
@@ -86,7 +66,13 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
       <td><?php echo $Result['name'];?></td>
       <td><?php echo $Result['comment'];?></td>
       <td><?php echo $Result['link'];?></td>
-      <td><button type="button" class="btn btn-warning" onclick="location.href='delete.php?id='<?php echo $Result['ID'];?>''">Delete</button> <button type="button" class="btn btn-warning">Change</button></td>
+      <td>
+        <form method="POST" action="delete.php">
+         <input type="hidden" name="id" value="<?php echo $Result['ID']; ?>" />
+        <button type="submit" class="btn btn-warning" >Delete</button>
+        </form>
+        <button type="button" class="btn btn-warning">Change</button>
+      </td>
     </tr>
 <?php
 }
