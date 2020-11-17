@@ -16,4 +16,9 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+if ($done)
+{
+    header("show.php");
+    exit;
+}
 ?>
