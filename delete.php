@@ -21,7 +21,7 @@ if (mysqli_connect_errno($conn))
 }
 
 $id=$_REQUEST['id'];
-$sql = "DELETE FROM guestbook WHERE ID=$id"; 
+$sql = "DELETE FROM guestbook WHERE id=$id"; 
 if ($conn->query($sql) === TRUE) {
   echo ('<div class="container"><h1 class="display-1">Delete!!</h1></div>');
   echo (' <form method="get" action="show.php">
